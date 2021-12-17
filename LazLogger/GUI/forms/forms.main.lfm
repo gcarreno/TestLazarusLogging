@@ -1,0 +1,21 @@
+object frmMain: TfrmMain
+  Left = 361
+  Height = 240
+  Top = 250
+  Width = 320
+  Caption = 'LazLogger GUI'
+  ClientHeight = 240
+  ClientWidth = 320
+  OnClose = FormClose
+  OnCloseQuery = FormCloseQuery
+  OnCreate = FormCreate
+  object btnLog: TButton
+    Left = 8
+    Height = 25
+    Top = 8
+    Width = 75
+    Caption = 'Log'
+    OnClick = btnLogClick
+    TabOrder = 0
+  end
+end
