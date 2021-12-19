@@ -6,6 +6,7 @@ object frmMain: TfrmMain
   Caption = 'LazLogger GUI'
   ClientHeight = 240
   ClientWidth = 320
+  Menu = mamMain
   OnClose = FormClose
   OnCloseQuery = FormCloseQuery
   OnCreate = FormCreate
@@ -17,5 +18,24 @@ object frmMain: TfrmMain
     Caption = 'Log'
     OnClick = btnLogClick
     TabOrder = 0
+  end
+  object mamMain: TMainMenu
+    Left = 266
+    Top = 23
+    object mnuFile: TMenuItem
+      Caption = '&File'
+      object mnuFileExit: TMenuItem
+        Action = actFileExit
+      end
+    end
+  end
+  object aclMain: TActionList
+    Left = 266
+    Top = 69
+    object actFileExit: TFileExit
+      Category = 'File'
+      Caption = 'E&xit'
+      Hint = 'Exit'
+    end
   end
 end
