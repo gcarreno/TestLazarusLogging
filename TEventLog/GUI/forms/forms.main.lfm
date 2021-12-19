@@ -1,0 +1,259 @@
+object frmMain: TfrmMain
+  Left = 361
+  Height = 420
+  Top = 250
+  Width = 400
+  Caption = 'TEventlog GUI'
+  ClientHeight = 420
+  ClientWidth = 400
+  Constraints.MinHeight = 420
+  Constraints.MinWidth = 400
+  Menu = mamMain
+  OnClose = FormClose
+  OnCloseQuery = FormCloseQuery
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  object panProperties: TPanel
+    Left = 0
+    Height = 218
+    Top = 0
+    Width = 400
+    Align = alTop
+    BevelOuter = bvNone
+    ClientHeight = 218
+    ClientWidth = 400
+    TabOrder = 0
+    object panPropertiesTitle: TPanel
+      Left = 0
+      Height = 33
+      Top = 0
+      Width = 400
+      Align = alTop
+      Alignment = taLeftJustify
+      Caption = '  TEventLog Properties'
+      TabOrder = 1
+    end
+    object chbEventlogActive: TCheckBox
+      Left = 4
+      Height = 23
+      Top = 37
+      Width = 396
+      Action = actEventLogActiveToggle
+      Align = alTop
+      BorderSpacing.Left = 4
+      BorderSpacing.Top = 4
+      TabOrder = 0
+    end
+    object panPropertiesProperties: TPanel
+      Left = 0
+      Height = 158
+      Top = 60
+      Width = 400
+      Align = alClient
+      BevelOuter = bvNone
+      ClientHeight = 158
+      ClientWidth = 400
+      TabOrder = 2
+      object chbAppendContent: TCheckBox
+        Left = 4
+        Height = 23
+        Top = 4
+        Width = 396
+        Align = alTop
+        BorderSpacing.Left = 4
+        BorderSpacing.Top = 4
+        Caption = 'Append Content'
+        TabOrder = 0
+      end
+    end
+  end
+  object panLog: TPanel
+    Left = 0
+    Height = 202
+    Top = 218
+    Width = 400
+    Align = alClient
+    BevelOuter = bvNone
+    ClientHeight = 202
+    ClientWidth = 400
+    TabOrder = 1
+    object panLogTitle: TPanel
+      Left = 0
+      Height = 33
+      Top = 0
+      Width = 400
+      Align = alTop
+      Alignment = taLeftJustify
+      Caption = '  Perform Log'
+      TabOrder = 3
+    end
+    object panLogRadio: TPanel
+      Left = 0
+      Height = 46
+      Top = 33
+      Width = 400
+      Align = alTop
+      AutoSize = True
+      BevelOuter = bvNone
+      ClientHeight = 46
+      ClientWidth = 400
+      TabOrder = 0
+      object rabLogLog: TRadioButton
+        Left = 4
+        Height = 23
+        Top = 23
+        Width = 61
+        Align = alLeft
+        BorderSpacing.Left = 4
+        BorderSpacing.Top = 4
+        Caption = 'Log()'
+        Checked = True
+        TabOrder = 1
+        TabStop = True
+      end
+      object rabLogInfo: TRadioButton
+        Left = 69
+        Height = 23
+        Top = 23
+        Width = 64
+        Align = alLeft
+        BorderSpacing.Left = 4
+        BorderSpacing.Top = 4
+        Caption = 'Info()'
+        TabOrder = 0
+      end
+      object rabLogWarning: TRadioButton
+        Left = 137
+        Height = 23
+        Top = 23
+        Width = 92
+        Align = alLeft
+        BorderSpacing.Left = 4
+        BorderSpacing.Top = 4
+        Caption = 'Warning()'
+        TabOrder = 2
+      end
+      object rabLogError: TRadioButton
+        Left = 233
+        Height = 23
+        Top = 23
+        Width = 72
+        Align = alLeft
+        BorderSpacing.Left = 4
+        BorderSpacing.Top = 4
+        Caption = 'Error()'
+        TabOrder = 3
+      end
+      object rablogDebug: TRadioButton
+        Left = 309
+        Height = 23
+        Top = 23
+        Width = 80
+        Align = alLeft
+        BorderSpacing.Left = 4
+        BorderSpacing.Top = 4
+        Caption = 'Debug()'
+        TabOrder = 4
+      end
+      object lblLogProcedure: TLabel
+        Left = 4
+        Height = 15
+        Top = 4
+        Width = 396
+        Align = alTop
+        BorderSpacing.Left = 4
+        BorderSpacing.Top = 4
+        Caption = 'Log procedure to use'
+        ParentColor = False
+      end
+    end
+    object lblLogLine: TLabel
+      Left = 4
+      Height = 15
+      Top = 83
+      Width = 396
+      Align = alTop
+      BorderSpacing.Left = 4
+      BorderSpacing.Top = 4
+      Caption = 'Text to log'
+      ParentColor = False
+    end
+    object edtLogLine: TEdit
+      Left = 4
+      Height = 33
+      Top = 102
+      Width = 388
+      Align = alTop
+      BorderSpacing.Left = 4
+      BorderSpacing.Top = 4
+      BorderSpacing.Right = 8
+      TabOrder = 1
+    end
+    object panLogButtons: TPanel
+      Left = 0
+      Height = 37
+      Top = 135
+      Width = 400
+      Align = alTop
+      AutoSize = True
+      BevelOuter = bvNone
+      ClientHeight = 37
+      ClientWidth = 400
+      TabOrder = 2
+      object btnEventLogLog: TButton
+        Left = 4
+        Height = 33
+        Top = 4
+        Width = 40
+        Action = actEventLogLog
+        Align = alLeft
+        AutoSize = True
+        BorderSpacing.Left = 4
+        BorderSpacing.Top = 4
+        TabOrder = 0
+      end
+    end
+  end
+  object EventLog: TEventLog
+    AppendContent = False
+    Identification = 'TEventLog GUI'
+    LogType = ltSystem
+    Active = False
+    RaiseExceptionOnError = False
+    DefaultEventType = etCustom
+    CustomLogType = 0
+    EventIDOffset = 0
+    Paused = False
+    Left = 272
+    Top = 328
+  end
+  object aclMain: TActionList
+    OnUpdate = aclMainUpdate
+    Left = 176
+    Top = 328
+    object actFileExit: TFileExit
+      Category = 'File'
+      Caption = 'E&xit'
+      Hint = 'Exit'
+    end
+    object actEventLogActiveToggle: TAction
+      Category = 'EventLog'
+      Caption = 'Active'
+      OnExecute = actEventLogActiveToggleExecute
+    end
+    object actEventLogLog: TAction
+      Category = 'EventLog'
+      Caption = 'Log'
+    end
+  end
+  object mamMain: TMainMenu
+    Left = 80
+    Top = 328
+    object mnuFile: TMenuItem
+      Caption = '&File'
+      object mnuFileExit: TMenuItem
+        Action = actFileExit
+      end
+    end
+  end
+end
