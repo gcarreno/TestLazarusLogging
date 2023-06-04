@@ -10,6 +10,9 @@ Repository to test and learn how to use the many logging choices in Lazarus
 - ExceptionLogger: https://github.com/r3code/lazarus-exception-logger (OPM)
 - Log4Delphi: https://wiki.freepascal.org/Log4Delphi
 - QucikLogger: https://github.com/exilon/QuickLogger
+- Log4L: https://github.com/CynicRus/Log4L
+- Renegade Logger: https://github.com/hiraethbbs/Renegade.Logger
+- ooLog: https://github.com/VencejoSoftware/ooLog
 
 ## LazLogger
 
