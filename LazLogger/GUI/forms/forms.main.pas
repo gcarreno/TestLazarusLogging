@@ -11,7 +11,10 @@ uses
 , Controls
 , Graphics
 , Dialogs
-, StdCtrls, Menus, ActnList, StdActns
+, StdCtrls
+, Menus
+, ActnList
+, StdActns
 , Common.Logging
 {$IFDEF LOG}
 , LazLogger
@@ -55,25 +58,25 @@ uses
 
 procedure TfrmMain.btnLogClick(Sender: TObject);
 begin
-  DebugLn(LOG_INFO, ['INFO: btnLogClick']);
+  DebugLn(LOG_INFO, ['[INFO ', {$I %FILE%},'(', {$I %LINENUM%}, ')] ', 'btnLogClick']);
 end;
 
 procedure TfrmMain.FormCloseQuery(Sender: TObject; var CanClose: boolean);
 begin
-  DebugLn(LOG_INFO, ['INFO: FormCloseQuery']);
+  DebugLn(LOG_INFO, ['[INFO ', {$I %FILE%},'(', {$I %LINENUM%}, ')] ', 'FormCloseQuery']);
   CanClose:= True;
 end;
 
 procedure TfrmMain.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
-  DebugLn(LOG_INFO, ['INFO: FormClose']);
+  DebugLn(LOG_INFO, ['[INFO ', {$I %FILE%},'(', {$I %LINENUM%}, ')] ', 'FormClose']);
   CloseAction:= caFree;
 end;
 
 procedure TfrmMain.FormCreate(Sender: TObject);
 begin
   InitShortCuts;
-  DebugLn(LOG_INFO, ['INFO: FormCreate']);
+  DebugLn(LOG_INFO, ['[INFO ', {$I %FILE%},'(', {$I %LINENUM%}, ')] ', 'FormCreate']);
 end;
 
 procedure TfrmMain.InitShortCuts;

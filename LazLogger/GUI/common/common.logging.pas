@@ -26,7 +26,7 @@ procedure InitLogGroups;
 begin
   // Initializing Log Groups
   {$IFDEF LOG}
-  DebugLogger.ParamForEnabledLogGroups:= '--debug-enable';
+  DebugLogger.ParamForEnabledLogGroups:= '--debug-groups-enable';
   {$ENDIF}
   LOG_INFO:=DebugLogger.FindOrRegisterLogGroup('LOG_INFO', True);
   LOG_WARNING:=DebugLogger.FindOrRegisterLogGroup('LOG_WARNING', True);

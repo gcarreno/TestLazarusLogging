@@ -1,4 +1,4 @@
-program lazloggergui;
+program LazLoggerGUI;
 
 {$mode objfpc}{$H+}
 
@@ -24,12 +24,13 @@ uses
 begin
   InitLogGroups;
 
-  DebugLnEnter(LOG_INFO, ['INFO: Starting']);
+  DebugLnEnter(LOG_INFO, ['[INFO ', {$I %FILE%},'(', {$I %LINENUM%}, ')] ', 'Starting']);
   RequireDerivedFormResource:=True;
+  Application.Title:='Lazarus Logger GUI';
   Application.Scaled:=True;
   Application.Initialize;
   Application.CreateForm(TfrmMain, frmMain);
   Application.Run;
-  DebugLnExit(LOG_INFO, ['INFO: Exiting']);
+  DebugLnExit(LOG_INFO, ['[INFO ', {$I %FILE%},'(', {$I %LINENUM%}, ')] ', 'Exiting']);
 end.
 
