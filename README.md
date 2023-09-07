@@ -6,9 +6,12 @@ Repository to test and learn how to use the many logging choices in Lazarus
 
 - LazLogger: https://wiki.freepascal.org/LazLogger (Comes with Lazarus)
 - TEventLogger: https://wiki.lazarus.freepascal.org/TEventLog (Comes with `fcl-base` package)
-- MultiLog: https://wiki.freepascal.org/MultiLog ([GitHub](https://github.com/blikblum/multilog)) (OPM)
+- MultiLog: https://wiki.freepascal.org/MultiLog  (OPM)
+  - GitHub: https://github.com/blikblum/multilog
 - ExceptionLogger: https://github.com/r3code/lazarus-exception-logger (OPM)
 - Log4Delphi: https://wiki.freepascal.org/Log4Delphi
+  - Author: http://log4delphi.sourceforge.net/index.html
+  - Port for `FPC`: http://sourceforge.net/projects/lazarus-ccr/files/Log4Delphi
 - QucikLogger: https://github.com/exilon/QuickLogger
 - Log4L: https://github.com/CynicRus/Log4L
 - Renegade Logger: https://github.com/hiraethbbs/Renegade.Logger
