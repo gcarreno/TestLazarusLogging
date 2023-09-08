@@ -14,7 +14,7 @@ Work in Progress:
 
 Next:
 - QuickLogger: https://github.com/exilon/QuickLogger
-  - Depends on QuickLib: fThreadLog
+  - Depends on QuickLib: https://github.com/exilon/QuickLib
 
 Maybe:
 - ExceptionLogger: https://github.com/r3code/lazarus-exception-logger (OPM)
