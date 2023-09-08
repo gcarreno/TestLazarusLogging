@@ -12,10 +12,12 @@ Repository to test and learn how to use the many logging choices in Lazarus
 - Log4Delphi: https://wiki.freepascal.org/Log4Delphi
   - Author: http://log4delphi.sourceforge.net/index.html
   - Port for `FPC`: http://sourceforge.net/projects/lazarus-ccr/files/Log4Delphi
-- QucikLogger: https://github.com/exilon/QuickLogger
+- QuickLogger: https://github.com/exilon/QuickLogger
+  - Depends on QuickLib: fThreadLog
 - Log4L: https://github.com/CynicRus/Log4L
 - Renegade Logger: https://github.com/hiraethbbs/Renegade.Logger
 - ooLog: https://github.com/VencejoSoftware/ooLog
+- datalogger: https://github.com/dliocode/datalogger
 
 ## LazLogger
 
